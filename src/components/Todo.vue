@@ -25,9 +25,7 @@
             @click="e => e.target.classList.toggle('completed')"
           >
             {{ index }}: {{ todo }}
-            <span class="button pull-right">
-              <button type="button" v-on:click="remove(index)" class="btn btn-danger">Remove</button>
-            </span>
+            <button type="button" v-on:click="remove(index)" class="btn btn-danger pull-right">Remove</button>
           </li>
         </ul>
       </div>
@@ -51,9 +49,6 @@
       },
       remove(index) {
         this.todos.splice(index, 1);
-      }, 
-      strike(todo) {
-
       }
     }
   }
